@@ -4,7 +4,7 @@
 #
 Name     : libuv
 Version  : 1.20.3
-Release  : 2
+Release  : 3
 URL      : https://github.com/libuv/libuv/archive/v1.20.3.tar.gz
 Source0  : https://github.com/libuv/libuv/archive/v1.20.3.tar.gz
 Summary  : multi-platform support library with a focus on asynchronous I/O.
