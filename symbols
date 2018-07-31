@@ -20,6 +20,7 @@ libuv.so.1:uv__epoll_pwait
 libuv.so.1:uv__epoll_wait
 libuv.so.1:uv__eventfd
 libuv.so.1:uv__eventfd2
+libuv.so.1:uv__fd_exists
 libuv.so.1:uv__free
 libuv.so.1:uv__fs_event_close
 libuv.so.1:uv__fs_poll_close
@@ -134,6 +135,7 @@ libuv.so.1:uv_dlerror
 libuv.so.1:uv_dlopen
 libuv.so.1:uv_dlsym
 libuv.so.1:uv_err_name
+libuv.so.1:uv_err_name_r
 libuv.so.1:uv_exepath
 libuv.so.1:uv_fileno
 libuv.so.1:uv_free_cpu_info
@@ -160,6 +162,7 @@ libuv.so.1:uv_fs_get_ptr
 libuv.so.1:uv_fs_get_result
 libuv.so.1:uv_fs_get_statbuf
 libuv.so.1:uv_fs_get_type
+libuv.so.1:uv_fs_lchown
 libuv.so.1:uv_fs_link
 libuv.so.1:uv_fs_lstat
 libuv.so.1:uv_fs_mkdir
@@ -311,6 +314,7 @@ libuv.so.1:uv_stop
 libuv.so.1:uv_stream_get_write_queue_size
 libuv.so.1:uv_stream_set_blocking
 libuv.so.1:uv_strerror
+libuv.so.1:uv_strerror_r
 libuv.so.1:uv_tcp_bind
 libuv.so.1:uv_tcp_connect
 libuv.so.1:uv_tcp_getpeername
