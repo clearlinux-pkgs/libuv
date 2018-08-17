@@ -243,14 +243,17 @@ libuv.so.1:uv_mutex_trylock
 libuv.so.1:uv_mutex_unlock
 libuv.so.1:uv_now
 libuv.so.1:uv_once
+libuv.so.1:uv_open_osfhandle
 libuv.so.1:uv_os_free_passwd
 libuv.so.1:uv_os_get_passwd
 libuv.so.1:uv_os_getenv
 libuv.so.1:uv_os_gethostname
 libuv.so.1:uv_os_getpid
 libuv.so.1:uv_os_getppid
+libuv.so.1:uv_os_getpriority
 libuv.so.1:uv_os_homedir
 libuv.so.1:uv_os_setenv
+libuv.so.1:uv_os_setpriority
 libuv.so.1:uv_os_tmpdir
 libuv.so.1:uv_os_unsetenv
 libuv.so.1:uv_pipe_bind
