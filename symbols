@@ -13,11 +13,6 @@ libuv.so.1:uv__count_bufs
 libuv.so.1:uv__dup
 libuv.so.1:uv__dup2_cloexec
 libuv.so.1:uv__dup3
-libuv.so.1:uv__epoll_create
-libuv.so.1:uv__epoll_create1
-libuv.so.1:uv__epoll_ctl
-libuv.so.1:uv__epoll_pwait
-libuv.so.1:uv__epoll_wait
 libuv.so.1:uv__eventfd
 libuv.so.1:uv__eventfd2
 libuv.so.1:uv__fd_exists
@@ -102,7 +97,6 @@ libuv.so.1:uv__udp_recv_start
 libuv.so.1:uv__udp_recv_stop
 libuv.so.1:uv__udp_send
 libuv.so.1:uv__udp_try_send
-libuv.so.1:uv__utimesat
 libuv.so.1:uv__work_done
 libuv.so.1:uv__work_submit
 libuv.so.1:uv_accept
