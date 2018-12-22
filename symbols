@@ -10,7 +10,6 @@ libuv.so.1:uv__cloexec_ioctl
 libuv.so.1:uv__close
 libuv.so.1:uv__close_nocheckstdio
 libuv.so.1:uv__count_bufs
-libuv.so.1:uv__dup
 libuv.so.1:uv__dup2_cloexec
 libuv.so.1:uv__dup3
 libuv.so.1:uv__eventfd
@@ -26,6 +25,7 @@ libuv.so.1:uv__getpwuid_r
 libuv.so.1:uv__handle_type
 libuv.so.1:uv__hrtime
 libuv.so.1:uv__idle_close
+libuv.so.1:uv__idna_toascii
 libuv.so.1:uv__inotify_add_watch
 libuv.so.1:uv__inotify_fork
 libuv.so.1:uv__inotify_init
@@ -84,6 +84,7 @@ libuv.so.1:uv__stream_flush_write_queue
 libuv.so.1:uv__stream_init
 libuv.so.1:uv__stream_open
 libuv.so.1:uv__strndup
+libuv.so.1:uv__strscpy
 libuv.so.1:uv__tcp_bind
 libuv.so.1:uv__tcp_close
 libuv.so.1:uv__tcp_connect
@@ -97,6 +98,7 @@ libuv.so.1:uv__udp_recv_start
 libuv.so.1:uv__udp_recv_stop
 libuv.so.1:uv__udp_send
 libuv.so.1:uv__udp_try_send
+libuv.so.1:uv__utf8_decode1
 libuv.so.1:uv__work_done
 libuv.so.1:uv__work_submit
 libuv.so.1:uv_accept
