@@ -17,11 +17,14 @@ libuv.so.1:uv__eventfd2
 libuv.so.1:uv__fd_exists
 libuv.so.1:uv__free
 libuv.so.1:uv__fs_event_close
+libuv.so.1:uv__fs_get_dirent_type
 libuv.so.1:uv__fs_poll_close
+libuv.so.1:uv__fs_readdir_cleanup
 libuv.so.1:uv__fs_scandir_cleanup
 libuv.so.1:uv__getaddrinfo_translate_error
 libuv.so.1:uv__getiovmax
 libuv.so.1:uv__getpwuid_r
+libuv.so.1:uv__getsockpeername
 libuv.so.1:uv__handle_type
 libuv.so.1:uv__hrtime
 libuv.so.1:uv__idle_close
@@ -77,6 +80,7 @@ libuv.so.1:uv__signal_loop_cleanup
 libuv.so.1:uv__signal_loop_fork
 libuv.so.1:uv__socket
 libuv.so.1:uv__socket_sockopt
+libuv.so.1:uv__statx
 libuv.so.1:uv__strdup
 libuv.so.1:uv__stream_close
 libuv.so.1:uv__stream_destroy
@@ -92,8 +96,12 @@ libuv.so.1:uv__tcp_keepalive
 libuv.so.1:uv__tcp_nodelay
 libuv.so.1:uv__timer_close
 libuv.so.1:uv__udp_bind
+libuv.so.1:uv__udp_check_before_send
 libuv.so.1:uv__udp_close
+libuv.so.1:uv__udp_connect
+libuv.so.1:uv__udp_disconnect
 libuv.so.1:uv__udp_finish_close
+libuv.so.1:uv__udp_is_connected
 libuv.so.1:uv__udp_recv_start
 libuv.so.1:uv__udp_recv_stop
 libuv.so.1:uv__udp_send
@@ -141,6 +149,7 @@ libuv.so.1:uv_fs_access
 libuv.so.1:uv_fs_chmod
 libuv.so.1:uv_fs_chown
 libuv.so.1:uv_fs_close
+libuv.so.1:uv_fs_closedir
 libuv.so.1:uv_fs_copyfile
 libuv.so.1:uv_fs_event_getpath
 libuv.so.1:uv_fs_event_init
@@ -164,11 +173,13 @@ libuv.so.1:uv_fs_lstat
 libuv.so.1:uv_fs_mkdir
 libuv.so.1:uv_fs_mkdtemp
 libuv.so.1:uv_fs_open
+libuv.so.1:uv_fs_opendir
 libuv.so.1:uv_fs_poll_getpath
 libuv.so.1:uv_fs_poll_init
 libuv.so.1:uv_fs_poll_start
 libuv.so.1:uv_fs_poll_stop
 libuv.so.1:uv_fs_read
+libuv.so.1:uv_fs_readdir
 libuv.so.1:uv_fs_readlink
 libuv.so.1:uv_fs_realpath
 libuv.so.1:uv_fs_rename
@@ -189,6 +200,7 @@ libuv.so.1:uv_get_total_memory
 libuv.so.1:uv_getaddrinfo
 libuv.so.1:uv_getnameinfo
 libuv.so.1:uv_getrusage
+libuv.so.1:uv_gettimeofday
 libuv.so.1:uv_guess_handle
 libuv.so.1:uv_handle_get_data
 libuv.so.1:uv_handle_get_loop
@@ -327,6 +339,7 @@ libuv.so.1:uv_tcp_nodelay
 libuv.so.1:uv_tcp_open
 libuv.so.1:uv_tcp_simultaneous_accepts
 libuv.so.1:uv_thread_create
+libuv.so.1:uv_thread_create_ex
 libuv.so.1:uv_thread_equal
 libuv.so.1:uv_thread_join
 libuv.so.1:uv_thread_self
@@ -344,8 +357,10 @@ libuv.so.1:uv_tty_init
 libuv.so.1:uv_tty_reset_mode
 libuv.so.1:uv_tty_set_mode
 libuv.so.1:uv_udp_bind
+libuv.so.1:uv_udp_connect
 libuv.so.1:uv_udp_get_send_queue_count
 libuv.so.1:uv_udp_get_send_queue_size
+libuv.so.1:uv_udp_getpeername
 libuv.so.1:uv_udp_getsockname
 libuv.so.1:uv_udp_init
 libuv.so.1:uv_udp_init_ex
