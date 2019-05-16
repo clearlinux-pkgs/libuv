@@ -8,6 +8,7 @@ libuv.so.1:uv__check_close
 libuv.so.1:uv__cloexec_fcntl
 libuv.so.1:uv__cloexec_ioctl
 libuv.so.1:uv__close
+libuv.so.1:uv__close_nocancel
 libuv.so.1:uv__close_nocheckstdio
 libuv.so.1:uv__count_bufs
 libuv.so.1:uv__dup2_cloexec
@@ -193,6 +194,7 @@ libuv.so.1:uv_fs_symlink
 libuv.so.1:uv_fs_unlink
 libuv.so.1:uv_fs_utime
 libuv.so.1:uv_fs_write
+libuv.so.1:uv_get_constrained_memory
 libuv.so.1:uv_get_free_memory
 libuv.so.1:uv_get_osfhandle
 libuv.so.1:uv_get_process_title
