@@ -4,7 +4,7 @@
 #
 Name     : libuv
 Version  : 1.29.1
-Release  : 11
+Release  : 12
 URL      : https://github.com/libuv/libuv/archive/v1.29.1/libuv-1.29.1.tar.gz
 Source0  : https://github.com/libuv/libuv/archive/v1.29.1/libuv-1.29.1.tar.gz
 Summary  : Multi-platform support library with a focus on asynchronous I/O
@@ -57,7 +57,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1558471579
+export SOURCE_DATE_EPOCH=1558474721
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
 export NM=gcc-nm
@@ -76,7 +76,7 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make VERBOSE=1 V=1 %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1558471579
+export SOURCE_DATE_EPOCH=1558474721
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/libuv
 cp LICENSE %{buildroot}/usr/share/package-licenses/libuv/LICENSE
