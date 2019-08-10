@@ -190,6 +190,7 @@ libuv.so.1:uv_fs_scandir
 libuv.so.1:uv_fs_scandir_next
 libuv.so.1:uv_fs_sendfile
 libuv.so.1:uv_fs_stat
+libuv.so.1:uv_fs_statfs
 libuv.so.1:uv_fs_symlink
 libuv.so.1:uv_fs_unlink
 libuv.so.1:uv_fs_utime
@@ -254,6 +255,8 @@ libuv.so.1:uv_mutex_unlock
 libuv.so.1:uv_now
 libuv.so.1:uv_once
 libuv.so.1:uv_open_osfhandle
+libuv.so.1:uv_os_environ
+libuv.so.1:uv_os_free_environ
 libuv.so.1:uv_os_free_passwd
 libuv.so.1:uv_os_get_passwd
 libuv.so.1:uv_os_getenv
