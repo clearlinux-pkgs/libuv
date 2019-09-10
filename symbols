@@ -333,6 +333,7 @@ libuv.so.1:uv_stream_set_blocking
 libuv.so.1:uv_strerror
 libuv.so.1:uv_strerror_r
 libuv.so.1:uv_tcp_bind
+libuv.so.1:uv_tcp_close_reset
 libuv.so.1:uv_tcp_connect
 libuv.so.1:uv_tcp_getpeername
 libuv.so.1:uv_tcp_getsockname
@@ -378,6 +379,7 @@ libuv.so.1:uv_udp_set_membership
 libuv.so.1:uv_udp_set_multicast_interface
 libuv.so.1:uv_udp_set_multicast_loop
 libuv.so.1:uv_udp_set_multicast_ttl
+libuv.so.1:uv_udp_set_source_membership
 libuv.so.1:uv_udp_set_ttl
 libuv.so.1:uv_udp_try_send
 libuv.so.1:uv_unref
