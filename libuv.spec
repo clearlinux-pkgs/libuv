@@ -4,16 +4,18 @@
 #
 Name     : libuv
 Version  : 1.32.0
-Release  : 16
+Release  : 17
 URL      : https://github.com/libuv/libuv/archive/v1.32.0/libuv-1.32.0.tar.gz
 Source0  : https://github.com/libuv/libuv/archive/v1.32.0/libuv-1.32.0.tar.gz
-Summary  : Multi-platform support library with a focus on asynchronous I/O
+Summary  : multi-platform support library with a focus on asynchronous I/O.
 Group    : Development/Tools
 License  : CC-BY-4.0 MIT NCSA
 Requires: libuv-lib = %{version}-%{release}
 Requires: libuv-license = %{version}-%{release}
+Patch1: 0001-test-udp-join-1.31.patch
 
 %description
+![libuv][libuv_banner]
 ## Overview
 libuv is a multi-platform support library with a focus on asynchronous I/O. It
 was primarily developed for use by [Node.js][], but it's also
@@ -25,7 +27,6 @@ Summary: dev components for the libuv package.
 Group: Development
 Requires: libuv-lib = %{version}-%{release}
 Provides: libuv-devel = %{version}-%{release}
-Requires: libuv = %{version}-%{release}
 Requires: libuv = %{version}-%{release}
 
 %description dev
@@ -51,14 +52,14 @@ license components for the libuv package.
 
 %prep
 %setup -q -n libuv-1.32.0
+%patch1 -p1
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1568156779
-# -Werror is for werrorists
+export SOURCE_DATE_EPOCH=1570082988
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -78,7 +79,7 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make VERBOSE=1 V=1 %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1568156779
+export SOURCE_DATE_EPOCH=1570082988
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/libuv
 cp LICENSE %{buildroot}/usr/share/package-licenses/libuv/LICENSE
