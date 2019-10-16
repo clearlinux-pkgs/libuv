@@ -4,10 +4,10 @@
 #
 Name     : libuv
 Version  : 1.32.0
-Release  : 17
+Release  : 18
 URL      : https://github.com/libuv/libuv/archive/v1.32.0/libuv-1.32.0.tar.gz
 Source0  : https://github.com/libuv/libuv/archive/v1.32.0/libuv-1.32.0.tar.gz
-Summary  : multi-platform support library with a focus on asynchronous I/O.
+Summary  : Multi-platform support library with a focus on asynchronous I/O
 Group    : Development/Tools
 License  : CC-BY-4.0 MIT NCSA
 Requires: libuv-lib = %{version}-%{release}
@@ -15,7 +15,6 @@ Requires: libuv-license = %{version}-%{release}
 Patch1: 0001-test-udp-join-1.31.patch
 
 %description
-![libuv][libuv_banner]
 ## Overview
 libuv is a multi-platform support library with a focus on asynchronous I/O. It
 was primarily developed for use by [Node.js][], but it's also
@@ -27,6 +26,7 @@ Summary: dev components for the libuv package.
 Group: Development
 Requires: libuv-lib = %{version}-%{release}
 Provides: libuv-devel = %{version}-%{release}
+Requires: libuv = %{version}-%{release}
 Requires: libuv = %{version}-%{release}
 
 %description dev
@@ -59,7 +59,8 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1570082988
+export SOURCE_DATE_EPOCH=1571232430
+# -Werror is for werrorists
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -79,12 +80,12 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make VERBOSE=1 V=1 %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1570082988
+export SOURCE_DATE_EPOCH=1571232430
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/libuv
-cp LICENSE %{buildroot}/usr/share/package-licenses/libuv/LICENSE
-cp LICENSE-docs %{buildroot}/usr/share/package-licenses/libuv/LICENSE-docs
-cp samples/socks5-proxy/LICENSE %{buildroot}/usr/share/package-licenses/libuv/samples_socks5-proxy_LICENSE
+cp %{_builddir}/libuv-1.32.0/LICENSE %{buildroot}/usr/share/package-licenses/libuv/848f7398f89046426a7ba23cb56cd3c93c030c64
+cp %{_builddir}/libuv-1.32.0/LICENSE-docs %{buildroot}/usr/share/package-licenses/libuv/1167f0e28fe2db01e38e883aaf1e749fb09f9ceb
+cp %{_builddir}/libuv-1.32.0/samples/socks5-proxy/LICENSE %{buildroot}/usr/share/package-licenses/libuv/baf66f4b03cb3662de800d5f5895314fbafbd6d2
 %make_install
 
 %files
@@ -108,6 +109,6 @@ cp samples/socks5-proxy/LICENSE %{buildroot}/usr/share/package-licenses/libuv/sa
 
 %files license
 %defattr(0644,root,root,0755)
-/usr/share/package-licenses/libuv/LICENSE
-/usr/share/package-licenses/libuv/LICENSE-docs
-/usr/share/package-licenses/libuv/samples_socks5-proxy_LICENSE
+/usr/share/package-licenses/libuv/1167f0e28fe2db01e38e883aaf1e749fb09f9ceb
+/usr/share/package-licenses/libuv/848f7398f89046426a7ba23cb56cd3c93c030c64
+/usr/share/package-licenses/libuv/baf66f4b03cb3662de800d5f5895314fbafbd6d2
