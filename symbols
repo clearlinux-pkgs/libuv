@@ -178,6 +178,7 @@ libuv.so.1:uv_fs_link
 libuv.so.1:uv_fs_lstat
 libuv.so.1:uv_fs_mkdir
 libuv.so.1:uv_fs_mkdtemp
+libuv.so.1:uv_fs_mkstemp
 libuv.so.1:uv_fs_open
 libuv.so.1:uv_fs_opendir
 libuv.so.1:uv_fs_poll_getpath
@@ -332,6 +333,7 @@ libuv.so.1:uv_signal_init
 libuv.so.1:uv_signal_start
 libuv.so.1:uv_signal_start_oneshot
 libuv.so.1:uv_signal_stop
+libuv.so.1:uv_sleep
 libuv.so.1:uv_spawn
 libuv.so.1:uv_stop
 libuv.so.1:uv_stream_get_write_queue_size
