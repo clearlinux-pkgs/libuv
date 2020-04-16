@@ -62,6 +62,7 @@ libuv.so.1:uv__random_getrandom
 libuv.so.1:uv__random_readpath
 libuv.so.1:uv__random_sysctl
 libuv.so.1:uv__realloc
+libuv.so.1:uv__reallocf
 libuv.so.1:uv__recvmmsg
 libuv.so.1:uv__recvmsg
 libuv.so.1:uv__run_check
@@ -167,6 +168,7 @@ libuv.so.1:uv_fs_get_type
 libuv.so.1:uv_fs_lchown
 libuv.so.1:uv_fs_link
 libuv.so.1:uv_fs_lstat
+libuv.so.1:uv_fs_lutime
 libuv.so.1:uv_fs_mkdir
 libuv.so.1:uv_fs_mkdtemp
 libuv.so.1:uv_fs_mkstemp
