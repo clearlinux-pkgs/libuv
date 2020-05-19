@@ -56,6 +56,7 @@ libuv.so.1:uv__poll_close
 libuv.so.1:uv__preadv
 libuv.so.1:uv__prepare_close
 libuv.so.1:uv__process_close
+libuv.so.1:uv__process_title_cleanup
 libuv.so.1:uv__pwritev
 libuv.so.1:uv__random_devurandom
 libuv.so.1:uv__random_getrandom
@@ -72,6 +73,7 @@ libuv.so.1:uv__run_timers
 libuv.so.1:uv__sendmmsg
 libuv.so.1:uv__server_io
 libuv.so.1:uv__set_process_title
+libuv.so.1:uv__signal_cleanup
 libuv.so.1:uv__signal_close
 libuv.so.1:uv__signal_global_once_init
 libuv.so.1:uv__signal_loop_cleanup
@@ -92,6 +94,7 @@ libuv.so.1:uv__tcp_close
 libuv.so.1:uv__tcp_connect
 libuv.so.1:uv__tcp_keepalive
 libuv.so.1:uv__tcp_nodelay
+libuv.so.1:uv__threadpool_cleanup
 libuv.so.1:uv__timer_close
 libuv.so.1:uv__udp_bind
 libuv.so.1:uv__udp_check_before_send
@@ -99,6 +102,7 @@ libuv.so.1:uv__udp_close
 libuv.so.1:uv__udp_connect
 libuv.so.1:uv__udp_disconnect
 libuv.so.1:uv__udp_finish_close
+libuv.so.1:uv__udp_init_ex
 libuv.so.1:uv__udp_is_connected
 libuv.so.1:uv__udp_recv_start
 libuv.so.1:uv__udp_recv_stop
@@ -164,6 +168,7 @@ libuv.so.1:uv_fs_get_path
 libuv.so.1:uv_fs_get_ptr
 libuv.so.1:uv_fs_get_result
 libuv.so.1:uv_fs_get_statbuf
+libuv.so.1:uv_fs_get_system_error
 libuv.so.1:uv_fs_get_type
 libuv.so.1:uv_fs_lchown
 libuv.so.1:uv_fs_link
@@ -233,6 +238,7 @@ libuv.so.1:uv_key_delete
 libuv.so.1:uv_key_get
 libuv.so.1:uv_key_set
 libuv.so.1:uv_kill
+libuv.so.1:uv_library_shutdown
 libuv.so.1:uv_listen
 libuv.so.1:uv_loadavg
 libuv.so.1:uv_loop_alive

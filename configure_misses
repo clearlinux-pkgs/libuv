@@ -1,6 +1,5 @@
-Configure miss: kstat_lookup in -lkstat
-Configure miss: perfstat_cpu in -lperfstat
-Configure miss: sendfile in -lsendfile
+Configure miss: library containing kstat_lookup
+Configure miss: library containing perfstat_cpu
 Configure miss: sys/ahafs_evProds.h usability
 Configure miss: sys/ahafs_evProds.h presence
 Configure miss: sys/ahafs_evProds.h
