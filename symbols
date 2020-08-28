@@ -14,6 +14,7 @@ libuv.so.1:uv__dup2_cloexec
 libuv.so.1:uv__dup3
 libuv.so.1:uv__fd_exists
 libuv.so.1:uv__free
+libuv.so.1:uv__fs_copy_file_range
 libuv.so.1:uv__fs_event_close
 libuv.so.1:uv__fs_get_dirent_type
 libuv.so.1:uv__fs_poll_close
@@ -43,6 +44,8 @@ libuv.so.1:uv__loop_configure
 libuv.so.1:uv__make_close_pending
 libuv.so.1:uv__make_pipe
 libuv.so.1:uv__malloc
+libuv.so.1:uv__metrics_set_provider_entry_time
+libuv.so.1:uv__metrics_update_idle_time
 libuv.so.1:uv__next_timeout
 libuv.so.1:uv__nonblock_fcntl
 libuv.so.1:uv__nonblock_ioctl
@@ -70,6 +73,7 @@ libuv.so.1:uv__run_check
 libuv.so.1:uv__run_idle
 libuv.so.1:uv__run_prepare
 libuv.so.1:uv__run_timers
+libuv.so.1:uv__search_path
 libuv.so.1:uv__sendmmsg
 libuv.so.1:uv__server_io
 libuv.so.1:uv__set_process_title
@@ -251,6 +255,7 @@ libuv.so.1:uv_loop_init
 libuv.so.1:uv_loop_new
 libuv.so.1:uv_loop_set_data
 libuv.so.1:uv_loop_size
+libuv.so.1:uv_metrics_idle_time
 libuv.so.1:uv_mutex_destroy
 libuv.so.1:uv_mutex_init
 libuv.so.1:uv_mutex_init_recursive
@@ -391,6 +396,7 @@ libuv.so.1:uv_udp_set_multicast_ttl
 libuv.so.1:uv_udp_set_source_membership
 libuv.so.1:uv_udp_set_ttl
 libuv.so.1:uv_udp_try_send
+libuv.so.1:uv_udp_using_recvmmsg
 libuv.so.1:uv_unref
 libuv.so.1:uv_update_time
 libuv.so.1:uv_uptime
