@@ -362,6 +362,7 @@ libuv.so.1:uv_thread_equal
 libuv.so.1:uv_thread_join
 libuv.so.1:uv_thread_self
 libuv.so.1:uv_timer_again
+libuv.so.1:uv_timer_get_due_in
 libuv.so.1:uv_timer_get_repeat
 libuv.so.1:uv_timer_init
 libuv.so.1:uv_timer_set_repeat
