@@ -65,6 +65,7 @@ libuv.so.1:uv__random_devurandom
 libuv.so.1:uv__random_getrandom
 libuv.so.1:uv__random_readpath
 libuv.so.1:uv__random_sysctl
+libuv.so.1:uv__read_start
 libuv.so.1:uv__realloc
 libuv.so.1:uv__reallocf
 libuv.so.1:uv__recvmmsg
@@ -280,6 +281,7 @@ libuv.so.1:uv_os_setpriority
 libuv.so.1:uv_os_tmpdir
 libuv.so.1:uv_os_uname
 libuv.so.1:uv_os_unsetenv
+libuv.so.1:uv_pipe
 libuv.so.1:uv_pipe_bind
 libuv.so.1:uv_pipe_chmod
 libuv.so.1:uv_pipe_connect
@@ -338,6 +340,7 @@ libuv.so.1:uv_signal_start
 libuv.so.1:uv_signal_start_oneshot
 libuv.so.1:uv_signal_stop
 libuv.so.1:uv_sleep
+libuv.so.1:uv_socketpair
 libuv.so.1:uv_spawn
 libuv.so.1:uv_stop
 libuv.so.1:uv_stream_get_write_queue_size
