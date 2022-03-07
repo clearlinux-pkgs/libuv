@@ -1,6 +1,7 @@
 libuv.so.1:uv_accept
 libuv.so.1:uv_async_init
 libuv.so.1:uv_async_send
+libuv.so.1:uv_available_parallelism
 libuv.so.1:uv_backend_fd
 libuv.so.1:uv_backend_timeout
 libuv.so.1:uv_barrier_destroy
