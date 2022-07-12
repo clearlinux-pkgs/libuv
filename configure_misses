@@ -1,3 +1,4 @@
 Configure miss: library containing kstat_lookup
 Configure miss: library containing perfstat_cpu
 Configure miss: sys/ahafs_evProds.h
+Configure miss: x86_64-generic-linux-gnu-file
