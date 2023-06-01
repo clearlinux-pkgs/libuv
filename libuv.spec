@@ -5,12 +5,12 @@
 #
 Name     : libuv
 Version  : 1.45.0
-Release  : 37
+Release  : 38
 URL      : https://github.com/libuv/libuv/archive/v1.45.0/libuv-1.45.0.tar.gz
 Source0  : https://github.com/libuv/libuv/archive/v1.45.0/libuv-1.45.0.tar.gz
 Summary  : multi-platform support library with a focus on asynchronous I/O.
 Group    : Development/Tools
-License  : CC-BY-4.0
+License  : CC-BY-4.0 MIT
 Requires: libuv-lib = %{version}-%{release}
 Requires: libuv-license = %{version}-%{release}
 # Suppress stripping binaries
@@ -65,7 +65,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1684511828
+export SOURCE_DATE_EPOCH=1685635714
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -96,10 +96,12 @@ cd ../buildavx2;
 make %{?_smp_mflags} check || :
 
 %install
-export SOURCE_DATE_EPOCH=1684511828
+export SOURCE_DATE_EPOCH=1685635714
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/libuv
+cp %{_builddir}/libuv-%{version}/LICENSE %{buildroot}/usr/share/package-licenses/libuv/0b475e38bd94d37bcfbfc28ea7fc024bd80a280a || :
 cp %{_builddir}/libuv-%{version}/LICENSE-docs %{buildroot}/usr/share/package-licenses/libuv/1167f0e28fe2db01e38e883aaf1e749fb09f9ceb || :
+cp %{_builddir}/libuv-%{version}/LICENSE-extra %{buildroot}/usr/share/package-licenses/libuv/7db2a53252ca3d44462e8b3c050c97742d726850 || :
 pushd ../buildavx2/
 %make_install_v3
 popd
@@ -111,7 +113,6 @@ popd
 
 %files dev
 %defattr(-,root,root,-)
-/V3/usr/lib64/libuv.so
 /usr/include/uv.h
 /usr/include/uv/errno.h
 /usr/include/uv/linux.h
@@ -123,11 +124,12 @@ popd
 
 %files lib
 %defattr(-,root,root,-)
-/V3/usr/lib64/libuv.so.1
 /V3/usr/lib64/libuv.so.1.0.0
 /usr/lib64/libuv.so.1
 /usr/lib64/libuv.so.1.0.0
 
 %files license
 %defattr(0644,root,root,0755)
+/usr/share/package-licenses/libuv/0b475e38bd94d37bcfbfc28ea7fc024bd80a280a
 /usr/share/package-licenses/libuv/1167f0e28fe2db01e38e883aaf1e749fb09f9ceb
+/usr/share/package-licenses/libuv/7db2a53252ca3d44462e8b3c050c97742d726850
