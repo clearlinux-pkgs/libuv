@@ -5,7 +5,7 @@
 #
 Name     : libuv
 Version  : 1.45.0
-Release  : 38
+Release  : 39
 URL      : https://github.com/libuv/libuv/archive/v1.45.0/libuv-1.45.0.tar.gz
 Source0  : https://github.com/libuv/libuv/archive/v1.45.0/libuv-1.45.0.tar.gz
 Summary  : multi-platform support library with a focus on asynchronous I/O.
@@ -65,7 +65,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1685635714
+export SOURCE_DATE_EPOCH=1685645649
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -96,7 +96,7 @@ cd ../buildavx2;
 make %{?_smp_mflags} check || :
 
 %install
-export SOURCE_DATE_EPOCH=1685635714
+export SOURCE_DATE_EPOCH=1685645649
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/libuv
 cp %{_builddir}/libuv-%{version}/LICENSE %{buildroot}/usr/share/package-licenses/libuv/0b475e38bd94d37bcfbfc28ea7fc024bd80a280a || :
