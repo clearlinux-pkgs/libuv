@@ -174,8 +174,10 @@ libuv.so.1:uv_os_uname
 libuv.so.1:uv_os_unsetenv
 libuv.so.1:uv_pipe
 libuv.so.1:uv_pipe_bind
+libuv.so.1:uv_pipe_bind2
 libuv.so.1:uv_pipe_chmod
 libuv.so.1:uv_pipe_connect
+libuv.so.1:uv_pipe_connect2
 libuv.so.1:uv_pipe_getpeername
 libuv.so.1:uv_pipe_getsockname
 libuv.so.1:uv_pipe_init
