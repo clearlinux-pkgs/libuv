@@ -5,9 +5,10 @@
 # autospec version: v3
 # autospec commit: c1050fe
 #
+%define keepstatic 1
 Name     : libuv
 Version  : 1.47.0
-Release  : 41
+Release  : 42
 URL      : https://github.com/libuv/libuv/archive/v1.47.0/libuv-1.47.0.tar.gz
 Source0  : https://github.com/libuv/libuv/archive/v1.47.0/libuv-1.47.0.tar.gz
 Summary  : multi-platform support library with a focus on asynchronous I/O.
@@ -65,6 +66,15 @@ Group: Default
 license components for the libuv package.
 
 
+%package staticdev
+Summary: staticdev components for the libuv package.
+Group: Default
+Requires: libuv-dev = %{version}-%{release}
+
+%description staticdev
+staticdev components for the libuv package.
+
+
 %prep
 %setup -q -n libuv-1.47.0
 cd %{_builddir}/libuv-1.47.0
@@ -74,7 +84,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1703112264
+export SOURCE_DATE_EPOCH=1703261230
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -133,7 +143,7 @@ FFLAGS="$CLEAR_INTERMEDIATE_FFLAGS"
 FCFLAGS="$CLEAR_INTERMEDIATE_FCFLAGS"
 ASFLAGS="$CLEAR_INTERMEDIATE_ASFLAGS"
 LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS"
-export SOURCE_DATE_EPOCH=1703112264
+export SOURCE_DATE_EPOCH=1703261230
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/libuv
 cp %{_builddir}/libuv-%{version}/LICENSE %{buildroot}/usr/share/package-licenses/libuv/0b475e38bd94d37bcfbfc28ea7fc024bd80a280a || :
@@ -145,6 +155,8 @@ popd
 pushd clr-build
 %make_install
 popd
+## Remove excluded files
+rm -f %{buildroot}*/usr/lib64/pkgconfig/libuv-static.pc
 /usr/bin/elf-move.py avx2 %{buildroot}-v3 %{buildroot} %{buildroot}/usr/share/clear/filemap/filemap-%{name}
 
 %files
@@ -169,7 +181,6 @@ popd
 /usr/lib64/cmake/libuv/libuvConfig-relwithdebinfo.cmake
 /usr/lib64/cmake/libuv/libuvConfig.cmake
 /usr/lib64/libuv.so
-/usr/lib64/pkgconfig/libuv-static.pc
 /usr/lib64/pkgconfig/libuv.pc
 
 %files doc
@@ -187,3 +198,7 @@ popd
 /usr/share/package-licenses/libuv/0b475e38bd94d37bcfbfc28ea7fc024bd80a280a
 /usr/share/package-licenses/libuv/1167f0e28fe2db01e38e883aaf1e749fb09f9ceb
 /usr/share/package-licenses/libuv/7db2a53252ca3d44462e8b3c050c97742d726850
+
+%files staticdev
+%defattr(-,root,root,-)
+/usr/lib64/libuv.a
