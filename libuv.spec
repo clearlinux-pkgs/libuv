@@ -7,10 +7,10 @@
 #
 %define keepstatic 1
 Name     : libuv
-Version  : 1.49.1
-Release  : 45
-URL      : https://github.com/libuv/libuv/archive/v1.49.1/libuv-1.49.1.tar.gz
-Source0  : https://github.com/libuv/libuv/archive/v1.49.1/libuv-1.49.1.tar.gz
+Version  : 1.49.2
+Release  : 46
+URL      : https://github.com/libuv/libuv/archive/v1.49.2/libuv-1.49.2.tar.gz
+Source0  : https://github.com/libuv/libuv/archive/v1.49.2/libuv-1.49.2.tar.gz
 Summary  : multi-platform support library with a focus on asynchronous I/O.
 Group    : Development/Tools
 License  : CC-BY-4.0 MIT
@@ -76,10 +76,10 @@ staticdev components for the libuv package.
 
 
 %prep
-%setup -q -n libuv-1.49.1
-cd %{_builddir}/libuv-1.49.1
+%setup -q -n libuv-1.49.2
+cd %{_builddir}/libuv-1.49.2
 pushd ..
-cp -a libuv-1.49.1 buildavx2
+cp -a libuv-1.49.2 buildavx2
 popd
 
 %build
@@ -87,7 +87,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1728664226
+export SOURCE_DATE_EPOCH=1729452753
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -150,7 +150,7 @@ FFLAGS="$CLEAR_INTERMEDIATE_FFLAGS"
 FCFLAGS="$CLEAR_INTERMEDIATE_FCFLAGS"
 ASFLAGS="$CLEAR_INTERMEDIATE_ASFLAGS"
 LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS"
-export SOURCE_DATE_EPOCH=1728664226
+export SOURCE_DATE_EPOCH=1729452753
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/libuv
 cp %{_builddir}/libuv-%{version}/LICENSE %{buildroot}/usr/share/package-licenses/libuv/0b475e38bd94d37bcfbfc28ea7fc024bd80a280a || :
